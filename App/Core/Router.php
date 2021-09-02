@@ -11,11 +11,13 @@ class Router
         '/register'    =>  'register.php'
     ];
 
+    const NOT_FOUND = 'errors/404.php';
+
     public function run()
     {
         $route = Url::current_url();
 
-        (!isset(self::PATHS[$route])) && $this->notFound(BASE_URL . 'views/errors/404.php');
+        (!isset(self::PATHS[$route])) && $this->notFound(BASE_URL . 'views/' . self::NOT_FOUND);
 
         $this->view(BASE_URL . 'views/' . self::PATHS[$route]);
 
