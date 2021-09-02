@@ -1,0 +1,14 @@
+{
+    "require": {
+        "symfony/dotenv": "^5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        },
+        "files": [ "App/Tools/helper.php" ]
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.3"
+    }
+}
